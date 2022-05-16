@@ -1,6 +1,7 @@
 const express = require('express')
 const sequelize = require('./database/conn')
 const product = require('./models/Product')
+const User = require('./models/User')
 const exphbs = require('express-handlebars')
 const app = express()
 const port = 3000
@@ -21,7 +22,7 @@ app.listen(port, () => {
 
 
 sequelize.sync().then( result =>{
-//console.log(result);
+console.log(result);
 app.listen(3001)
 }).catch (err =>{
 

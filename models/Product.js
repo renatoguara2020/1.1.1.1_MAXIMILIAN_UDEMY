@@ -36,4 +36,5 @@ description:{
 
 });
 
+//sequelize.sync({force:true})
 module.exports = Product;
