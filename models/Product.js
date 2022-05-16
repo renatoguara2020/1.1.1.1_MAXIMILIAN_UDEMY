@@ -23,6 +23,11 @@ price:{
     allowNull: false,
 },
 
+imageUrl:{
+    type: Sequelize.STRING,
+    allowNull: false,
+},
+
 description:{
 
     type: Sequelize.STRING,
