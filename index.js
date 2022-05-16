@@ -1,11 +1,18 @@
 const express = require('express')
 const sequelize = require('./database/conn')
 const product = require('./models/Product')
+const exphbs = require('express-handlebars')
 const app = express()
 const port = 3000
 
+
+app.use(express.urlencoded({extended: true}));
+
+app.use(express.json());
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('home')
 })
 
 app.listen(port, () => {
