@@ -1,6 +1,7 @@
 const express = require('express')
 const sequelize = require('./database/conn')
-const product = require('./models/Product')
+//const product = require('./models/Product')
+const conn = require('./database/conn')
 const User = require('./models/User')
 const exphbs = require('express-handlebars')
 const app = express()
@@ -21,9 +22,9 @@ app.listen(port, () => {
 })
 
 
-sequelize.sync().then( result =>{
+conn.sync().then( result =>{
 console.log(result);
-app.listen(3001)
+app.listen(3000)
 }).catch (err =>{
 
     console.error(err)
