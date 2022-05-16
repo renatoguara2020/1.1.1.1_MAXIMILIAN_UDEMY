@@ -34,4 +34,6 @@ description:{
     allowNull: false,
 }
 
-})
+});
+
+module.exports = Product;
