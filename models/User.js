@@ -25,5 +25,5 @@ const User = conn.define('User', {
 
     },
 })
-//sequelize.sync({force:true})
+//sequelize.sync({alter:true})
 module.exports = User;
