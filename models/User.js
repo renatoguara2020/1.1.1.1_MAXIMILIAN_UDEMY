@@ -24,6 +24,12 @@ const User = conn.define('User', {
         type: DataTypes.BOOLEAN,
 
     },
+
+    dataNascimento:{
+
+        type: DataTypes.DATE,
+        
+    },
 })
-//sequelize.sync({alter:true})
+//sequelize.sync({force:true})
 module.exports = User;
