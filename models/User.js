@@ -5,6 +5,15 @@ const conn = require('../database/conn');
 
 const User = conn.define('User', {
 
+     id:{
+
+        type: DataTypes.BIGINT,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+
+     },
+
     name:{
 
         type: DataTypes.STRING,
